@@ -1,22 +1,24 @@
 {
-  "name": "infra",
-  "version": "0.1.0",
+  "name": "file-storage-app",
+  "version": "1.0.0",
+  "description": "sample AWS application which uses CDK with TypeScript",
+  "author": {
+    "name": "Hussain Mansoor",
+    "url": "https://ihusyn.wordpress.com"
+  },  
+  "license": "MIT",
   "bin": {
     "infra": "bin/infra.js"
   },
   "scripts": {
     "build": "tsc",
-    "watch": "tsc -w",
-    "test": "jest",
+    "watch": "tsc -w",    
     "cdk": "cdk"
   },
   "devDependencies": {
     "aws-cdk": "1.51.0",
     "@aws-cdk/assert": "1.51.0",
-    "@types/jest": "^25.2.1",
-    "@types/node": "10.17.5",
-    "jest": "^25.5.0",
-    "ts-jest": "^25.3.1",
+    "@types/node": "10.17.5",    
     "ts-node": "^8.1.0",
     "typescript": "~3.7.2"
   },
