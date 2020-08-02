@@ -2,7 +2,7 @@ import * as cdk from '@aws-cdk/core';
 import * as s3 from '@aws-cdk/aws-s3';
 import * as cf from '@aws-cdk/aws-cloudfront';
 import { OriginAccessIdentity, CloudFrontWebDistribution } from '@aws-cdk/aws-cloudfront';
-import { Bucket, HttpMethods } from '@aws-cdk/aws-s3';
+import { Bucket } from '@aws-cdk/aws-s3';
 
 export class InfraStack extends cdk.Stack {
   constructor(scope: cdk.App, id: string, props?: cdk.StackProps) {
