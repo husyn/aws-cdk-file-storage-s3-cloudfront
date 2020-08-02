@@ -1,18 +1,29 @@
 # aws-cdk-file-storage-s3-cloudfront
-Sample AWS application which uses CDK in TypeScript to demo file storage solution
+Sample AWS application which uses CDK with TypeScript. The application is File Storage Solution which uses CloudFront to efficiently upload & cache files to a S3 storage.
 
 
 ## Description
 
-It creates a CDK app with an instance of a stack (`S3BucketDataStack`)
-The `cdk.json` file tells the CDK Toolkit how to execute your app.
+It creates a CDK app with an instance of a stack (`File-Storage-App`).
 
-## Useful commands
 
+## Account setup
+Before deploying the stack make sure AWS credentials are setup correctly. Below commands setup AWS environment. or run `aws configure` for environment setup.
+
+On the CLI set these environment variables
+ * `export AWS_DEFAULT_REGION={aws-region}`
+ * `export AWS_ACCESS_KEY_ID={access-key}`
+ * `export AWS_SECRET_ACCESS_KEY={secret-key}`
+
+## Deploying the stack
+
+ * `npm install`     install the dependencies
  * `npm run build`   compile typescript to js
- * `npm run watch`   watch for changes and compile
  * `cdk deploy`      deploy this stack to your default AWS account/region
- * `cdk diff`        compare deployed stack with current state
- * `cdk synth`       emits the synthesized CloudFormation template
- * `cdk destroy`     destroy the stack
+
+After the stack is deployed
+
+## Test the application
+
+Once the application is deployed
  
