@@ -1,5 +1,6 @@
 # File Storage App using AWS CDK, S3 and CloudFront
-This is a sample AWS application which uses CDK to generate Infrastucture with TypeScript runtime. The application is File Storage Solution which uses CloudFront to efficiently upload & cache files to and from a S3 storage. It creates a CDK app with an instance of a CloudFormation stack named `File-Storage-App`.
+This is a sample AWS application which uses CDK to generate Infrastucture with TypeScript runtime. The application is File Storage Solution which uses CloudFront to efficiently upload & cache files to and from a S3 storage. It creates a CDK app with an instance of a CloudFormation stack named `File-Storage-App`. Related blogpost can be found [here](https://ihusyn.wordpress.com/2020/08/05/file-storage-solution-on-aws-cloud/)
+
 
 # Getting Starteds
 
