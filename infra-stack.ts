@@ -4,7 +4,7 @@ import * as cf from '@aws-cdk/aws-cloudfront';
 import { OriginAccessIdentity, CloudFrontWebDistribution } from '@aws-cdk/aws-cloudfront';
 import { Bucket } from '@aws-cdk/aws-s3';
 
-import config from 'config.json';
+import config from './config.json';
 
 export class InfraStack extends cdk.Stack {
   constructor(scope: cdk.App, id: string, props?: cdk.StackProps) {
