@@ -12,8 +12,9 @@ export class InfraStack extends cdk.Stack {
 
     const s3Bucket_documents_datasource:Bucket = new s3.Bucket(this, 'documents-storage-bucket', {
       bucketName: `${config.PROJECT_NAME}-bucket`,
-      publicReadAccess: false
-    });
+      publicReadAccess: false,
+      blockPublicAccess: s3.BlockPublicAccess.BLOCK_ALL
+    });    
     new cdk.CfnOutput(this, 'Bucket', { value: s3Bucket_documents_datasource.bucketName });
 
     const oai: OriginAccessIdentity = new OriginAccessIdentity(this, 'document-access-oai');
