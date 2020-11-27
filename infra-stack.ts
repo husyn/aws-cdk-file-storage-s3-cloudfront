@@ -4,12 +4,14 @@ import * as cf from '@aws-cdk/aws-cloudfront';
 import { OriginAccessIdentity, CloudFrontWebDistribution } from '@aws-cdk/aws-cloudfront';
 import { Bucket } from '@aws-cdk/aws-s3';
 
+import config from 'config.json';
+
 export class InfraStack extends cdk.Stack {
   constructor(scope: cdk.App, id: string, props?: cdk.StackProps) {
     super(scope, id, props);
 
     const s3Bucket_documents_datasource:Bucket = new s3.Bucket(this, 'documents-storage-bucket', {
-      bucketName: "site-domain-documents-storage",
+      bucketName: `${config.PROJECT_NAME}-bucket`,
       publicReadAccess: false
     });
     new cdk.CfnOutput(this, 'Bucket', { value: s3Bucket_documents_datasource.bucketName });
