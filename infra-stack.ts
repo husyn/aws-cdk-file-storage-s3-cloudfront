@@ -13,8 +13,11 @@ export class InfraStack extends cdk.Stack {
     const s3Bucket_documents_datasource:Bucket = new s3.Bucket(this, 'documents-storage-bucket', {
       bucketName: `${config.PROJECT_NAME}-bucket`,
       publicReadAccess: false,
-      blockPublicAccess: s3.BlockPublicAccess.BLOCK_ALL
-    });    
+      blockPublicAccess: s3.BlockPublicAccess.BLOCK_ALL,
+      websiteIndexDocument: config.WEBSITE.WEBSITE_INDEX_PAGE,
+      websiteErrorDocument: config.WEBSITE.WEBSITE_ERROR_PAGE
+    });
+    
     new cdk.CfnOutput(this, 'Bucket', { value: s3Bucket_documents_datasource.bucketName });
 
     const oai: OriginAccessIdentity = new OriginAccessIdentity(this, 'document-access-oai');

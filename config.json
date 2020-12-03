@@ -1,4 +1,8 @@
 {
     "PROJECT_NAME": "sample-project",    
-    "ENVIRONMENT": "dev"
+    "ENVIRONMENT": "dev",    
+    "WEBSITE" : {
+        "WEBSITE_INDEX_PAGE": "index.html",
+        "WEBSITE_ERROR_PAGE": "error.html"
+    }
 }
